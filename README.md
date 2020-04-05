@@ -1,7 +1,7 @@
 # projeto-django
 Construção de website para o aprendizado do framework django
 
-Disponivel em: https://mypyproproject.heroku.com
+Disponivel em: https://mypyproproject.herokuapp.com
 
 [![Build Status](https://travis-ci.com/Lnvictor/projeto-django.svg?branch=master)](https://travis-ci.com/Lnvictor/projeto-django)
 [![Updates](https://pyup.io/repos/github/Lnvictor/projeto-django/shield.svg)](https://pyup.io/repos/github/Lnvictor/projeto-django/)

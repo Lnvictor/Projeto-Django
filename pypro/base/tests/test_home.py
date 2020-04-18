@@ -6,7 +6,7 @@ from pypro.django_assertions import assert_contains
 
 @pytest.fixture
 def resp(client: Client):
-    return client.get(reverse('base:home'))
+    yield client.get(reverse('base:home'))
 
 
 def test_home(resp):

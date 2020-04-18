@@ -8,6 +8,7 @@ flake8 = "*"
 pytest-django = "*"
 pytest-cov = "*"
 codecov = "*"
+pytest = "*"
 
 [packages]
 django = "*"
@@ -16,6 +17,9 @@ python-decouple = "*"
 dj-database-url = "*"
 psycopg2-binary = "*"
 django-s3-folder-storage = "*"
+collectfast = "*"
+django-debug-toolbar = "*"
+sentry-sdk = "*"
 
 [requires]
 python_version = "3.8"

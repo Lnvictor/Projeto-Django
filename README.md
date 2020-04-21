@@ -1,5 +1,5 @@
 # projeto-django
-Construção de website para o aprendizado do framework django
+Construção de website para o aprendizado do framework django para o curso Python Pro
 
 Disponivel em: https://mypyproproject.herokuapp.com
 

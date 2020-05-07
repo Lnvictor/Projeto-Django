@@ -1,32 +1,44 @@
 import pytest
-from django.test import TestCase
-
-# Create your tests here.
 from django.urls import reverse
 from model_mommy import mommy
 
 from pypro.django_assertions import assert_contains
-from pypro.modulos.models import Modulo
+from pypro.modulos.models import Aula, Modulo
 
 
 @pytest.fixture
-def modulo():
+def modulo(db):
     return mommy.make(Modulo)
 
 
 @pytest.fixture
-def resp(client, modulo):
-    return client.get(reverse('modulos:detalhe', kwargs={'slug': modulo.slug}))
+def aulas(modulo):
+    return mommy.make(Aula, 3, modulo=modulo)
 
 
-def test_titulo_do_modulo(resp, modulos):
-    for modulo in modulos:
-        assert_contains(resp, modulo.titulo)
+@pytest.fixture
+def resp(client, modulo, aulas):
+    resp = client.get(reverse('modulos:detalhe', kwargs={'slug': modulo.slug}))
+    return resp
 
 
-def test_descricao(resp, modulos:Modulo):
+def test_titulo(resp, modulo: Modulo):
+    assert_contains(resp, modulo.titulo)
+
+
+def test_descricao(resp, modulo: Modulo):
     assert_contains(resp, modulo.descricao)
 
 
-def test_publico(resp, modulo):
+def test_publico(resp, modulo: Modulo):
     assert_contains(resp, modulo.publico)
+
+
+def test_aulas_titulos(resp, aulas):
+    for aula in aulas:
+        assert_contains(resp, aula.titulo)
+
+
+def test_aulas_links(resp, aulas):
+    for aula in aulas:
+        assert_contains(resp, aula.get_absolute_url())

@@ -160,10 +160,10 @@
         },
         "jmespath": {
             "hashes": [
-                "sha256:695cb76fa78a10663425d5b73ddc5714eb711157e52704d69be03b1a02ba4fec",
-                "sha256:cca55c8d153173e21baa59983015ad0daf603f9cb799904ff057bfb8ff8dc2d9"
+                "sha256:a490e280edd1f57d6de88636992d05b71e97d69a26a19f058ecf7d304474bf5e",
+                "sha256:e8dcd576ed616f14ec02eed0005c85973b5890083313860136657e24784e4c04"
             ],
-            "version": "==0.9.5"
+            "version": "==1.0.0"
         },
         "parso": {
             "hashes": [

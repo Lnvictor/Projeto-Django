@@ -152,11 +152,8 @@
             "version": "==0.2.0"
         },
         "jedi": {
-            "hashes": [
-                "sha256:cd60c93b71944d628ccac47df9a60fec53150de53d42dc10a7fc4b5ba6aae798",
-                "sha256:df40c97641cb943661d2db4c33c2e1ff75d491189423249e989bcea4464f3030"
-            ],
-            "version": "==0.17.0"
+            "hashes": [],
+            "version": "==0.18.2"
         },
         "jmespath": {
             "hashes": [
